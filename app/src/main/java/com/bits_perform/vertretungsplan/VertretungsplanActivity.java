@@ -29,17 +29,5 @@ public class VertretungsplanActivity extends AppCompatActivity {
         tableView.loadData(table,"text/html", "ISO-8859-1");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent2 = new Intent(Intent.ACTION_CALL);
-                intent2.putExtra(WOW,"Guck mal, ich hab endlich meine VT App fertig!!");
-                Intent intent1 = Intent.createChooser(intent2,WOW);
-                if (intent2.resolveActivity(getPackageManager()) != null)
-                startActivity(intent1);
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 }

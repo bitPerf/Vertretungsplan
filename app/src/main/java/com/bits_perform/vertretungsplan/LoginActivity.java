@@ -311,7 +311,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public boolean isDataSaved() {
-        return getUserData()[0] != null;
+        return getUserData() != null;
     }
 
     public String[] getUserData() {
@@ -322,7 +322,7 @@ public class LoginActivity extends AppCompatActivity {
             ret[0] = r.readLine();
             ret[1] = r.readLine();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            return null;
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
